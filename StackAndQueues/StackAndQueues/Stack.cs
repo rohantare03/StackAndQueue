@@ -18,5 +18,10 @@ namespace StackAndQueues
         {
             linkedList.Display();
         }
+        public void Pop(Node node)
+        {
+            Console.WriteLine("\nStack: ");
+            linkedList.Empty();
+        }
     }
 }
