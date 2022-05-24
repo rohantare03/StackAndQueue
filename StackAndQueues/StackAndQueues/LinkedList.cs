@@ -29,6 +29,7 @@ namespace StackAndQueues
                 head = node;
             }
         }
+
         public void Empty()
         {
             if (head == null)
@@ -37,6 +38,27 @@ namespace StackAndQueues
             }
             Console.WriteLine("Value Poped is {0}", head.data);
             head = head.next;
+        }
+        public void Append(int data)
+        {
+            //create new node
+            Node node = new Node(data);
+            //check if list is empty then node becomes as head
+            if (this.head == null)
+            {
+                this.head = node;
+            }
+            else
+            {
+                //if not then put head in temp variable
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("Added node to the LinkedList :" + data);
         }
         public void Display()
         {
